@@ -1,7 +1,10 @@
 package com.project.questapp.entities;
 
-import jakarta.persistence.*;
 import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
