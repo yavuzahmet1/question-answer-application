@@ -25,4 +25,3 @@ public class Post {
     @Column(columnDefinition = "text")
     private String text;
 }
-//14.55
