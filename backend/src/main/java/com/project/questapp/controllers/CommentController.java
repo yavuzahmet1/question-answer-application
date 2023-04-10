@@ -21,19 +21,19 @@ public class CommentController {
     public List<Comment> getAllComment(@RequestParam Optional<Long> userId, @RequestParam Optional<Long> postId){
       return commentService.getAllCommentsWithParam(userId,postId);
     }
-    @GetMapping
+    @GetMapping("/{commentId}")
     public Comment getOneComment(@PathVariable Long commentId){
         return commentService.getOneCommentById(commentId);
     }
-    @PostMapping("/commentId")
+    @PostMapping
     public Comment createOneComment(@RequestBody CommentCreateRequest request){
         return commentService.createOneComment(request);
     }
-    @PutMapping("/commentId")
+    @PutMapping("/{commentId}")
     public  Comment updateOneComment(@PathVariable Long commentId, @RequestBody CommentUpdateRequest request){
         return commentService.updateOneCommentById(commentId,request);
     }
-    @DeleteMapping
+    @DeleteMapping("/commentId")
     public void deleteOneComment(@PathVariable Long commentId){
         commentService.deleteOneComment(commentId);
     }
