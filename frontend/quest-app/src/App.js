@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Navbar></Navbar>
-      <Route>
+      <Switch>
         <Route exact path="/" component={Home}></Route>
-        <Route exact route="/users/:userId" component={User}> </Route>
-      </Route>
+        <Route exact path="/users/:userId" component={User}> </Route>
+      </Switch>
       </BrowserRouter>
       
     </div>
