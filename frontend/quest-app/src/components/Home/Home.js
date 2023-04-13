@@ -21,7 +21,6 @@ function Home() {
                 (error) => {
                     setIsLoaded(true);
                     setError(error);
-
                 }
             )
     }, [])
@@ -31,7 +30,7 @@ function Home() {
 
     } else if (!isLoaded) {
         return <div>Loading... </div>;
-        
+
     } else {
         return (
             <div className="container">
