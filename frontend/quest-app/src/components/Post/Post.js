@@ -15,34 +15,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { ExpandMore } from "@mui/icons-material";
-//import { useState } from "react";
-
-/*const useStyles=makeStyles((theme)=>({
-  root:{
-    maxWidth:345,
-  },
-  media:{
-    height:0,
-    panddingTop:'56.25%'
-  },
-  expand:{
-    transform:'rotate(0deg)',
-    marginLeft:'auto',
-    transition:theme.transitions.create('transfor',{
-      duration:theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen:{
-    transform:'rotate(180deg)',
-  },
-  avatar:{
-    backgroundColor:red[500],
-  },
-}));*/
+import { Class, ExpandMore } from "@mui/icons-material";
+import { Link } from "@mui/material";
 
 function Post(props) {
-    const{title,text}=props;
+    const{title,text,userId,userName}=props;
     //const classes=useStyles();
     const [expanded,setExpanded]=useState(false);
     const handleExpandClick = () => {
@@ -54,9 +31,12 @@ function Post(props) {
               <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
+        
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            A
+            
           </Avatar>
+         
         }
         action={
           <IconButton aria-label="settings">

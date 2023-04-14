@@ -34,11 +34,11 @@ function Home() {
     } else {
         return (
             <div className="container">
-                Home !!
+                
 
                 {postList.map(post => (
 
-                    <Post title={post.title} text={post.text}></Post>
+                    <Post userId={post.userId} title={post.title} text={post.text}></Post>
 
                 ))}
             </div>
